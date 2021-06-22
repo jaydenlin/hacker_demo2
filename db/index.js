@@ -24,7 +24,8 @@ const userValid = async (username, password) => {
 }
 
 const updateFunds = async (username, points) => {
-    return await dbRun(`UPDATE funds SET points=${points} WHERE username='${username}'`);
+    console.log(`UPDATE funds SET points=${points} WHERE username='${username}';`);
+    return await dbRun(`UPDATE funds SET points=${points} WHERE username='${username}';`);
 }
 const getFunds = async (username) => {
     console.log(`SELECT username, card, points FROM funds WHERE username = '${username}';`);

@@ -4,7 +4,8 @@
     margin: 150px auto;
     text-align: center;
     font-size: 80px;
-    background: #e2e2e2;
+    /*background: #e2e2e2;*/
+    background: #EEE;
     padding: 30px 0px 50px 0px;
     border-radius: 15px;
 }
@@ -63,4 +64,9 @@
 
      font-size:30px;
      padding: 15px;
+ }
+ .iphone {
+     margin: auto;
+     width: 300px;
+     background:url(/static/iphones.jpeg) no-repeat center; height:150px; width:300px;
  }

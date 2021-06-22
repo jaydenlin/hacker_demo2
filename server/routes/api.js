@@ -5,7 +5,7 @@ module.exports = {
 
     setRoutes: (server, apiHost)=>{
 
-        server.putAsync(`/api/funds`, async (req, res) => {
+        server.postAsync(`/api/funds`, async (req, res) => {
             const username = token.validateToken(req.cookies["token"]);
             if (!username) {
                 return res.status(401).send({
@@ -13,6 +13,7 @@ module.exports = {
                 });
             }
             const { points } = req.body;
+            console.log(req.body);
             await db.updateFunds(username, points);
             return res.send({username, points});
         });

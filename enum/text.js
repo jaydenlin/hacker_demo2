@@ -34,6 +34,6 @@ module.exports = {
     ARTICLE_WILL_BE_PUBLISH_TO: '文章將被發佈到',
     DISCUSSION_BOARD: '討論區',
     GO_TO: '前往',
-    BRAND_NAME: '網站名稱'
+    BRAND_NAME: '傑登遊戲'
 
 }
