@@ -3,6 +3,7 @@ import s from './index.module.css';
 import axios from 'axios';
 import PageBase from '../components/PageBase'
 import SignInForm from '../components/SignInForm'
+import Router from 'next/router';
 import Cookies from 'js-cookie';
 class SignIn extends React.Component {
     constructor(props) {
@@ -27,6 +28,7 @@ class SignIn extends React.Component {
                                 "password": values.password
                             });
                             // 登入成功
+                            Router.push('/profile');
 
                         } catch (e) {
                             // 登入失敗

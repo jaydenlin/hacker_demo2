@@ -8,7 +8,7 @@ class Homepage extends React.Component {
       return {query}
     }
     componentDidMount(){
-      
+
     }
 
     render(){
