@@ -1,0 +1,6 @@
+{
+  "name": "MenuAppBar",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./MenuAppBar.js"
+}

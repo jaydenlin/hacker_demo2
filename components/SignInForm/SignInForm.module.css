@@ -1,0 +1,32 @@
+.paper {
+    display: flex !important;
+    margin-top: 64px !important;
+    align-items: center !important;
+    flex-direction: column !important;
+}
+.avatar {
+    margin: 8px !important;
+    background-color: #f50057 !important;
+}
+.form {
+    width: 100% !important; /* Fix IE 11 issue.*/
+    margin-top: 8px !important;
+}
+.submit {
+    margin: 24px 0px 16px !important;
+}
+.fbSignUp{
+    margin: 24px 0px 16px !important;
+    background-color: #4267B2 !important;
+    color: #fff !important;
+}
+.ssoForm {
+    width: 100%;
+    padding: 20px 0px 30px 0px;
+    border-bottom: 1px solid #e7e7e7;
+    color: #fff;
+}
+.fbiIcon{
+    padding-right: 10px;
+    height: 24px;
+}
