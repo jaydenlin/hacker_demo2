@@ -16,8 +16,12 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.paper,
     },
 }));
-
-export default function DataList() {
+const capitalize = (name="")=>{
+    return name.charAt(0).toUpperCase() + name.slice(1);
+}
+export default function DataList({data={
+    username: ""
+}}) {
     const classes = useStyles();
 
     return (
@@ -25,12 +29,15 @@ export default function DataList() {
         <Card>
         <List className={classes.root}>
             <ListItem>
+                <ListItemText primary={`Hi, ${capitalize(data.username)}`}/>
+            </ListItem>
+            <ListItem>
                 <ListItemAvatar>
                     <Avatar>
                         <PaymentIcon />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="綁定信用卡" secondary="8888-8888-xxxx-xxxx"/>
+                <ListItemText primary="綁定信用卡" secondary={data.card}/>
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
@@ -38,7 +45,7 @@ export default function DataList() {
                         <MonetizationOnIcon />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="儲值金額" secondary="200000" />
+                <ListItemText primary="儲值金額" secondary={data.points} />
             </ListItem>
         </List>
         </Card>

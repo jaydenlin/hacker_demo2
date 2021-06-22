@@ -7,10 +7,6 @@ class Homepage extends React.Component {
     static getInitialProps({query}) {
       return {query}
     }
-    componentDidMount(){
-
-    }
-
     render(){
       return (
       <div>

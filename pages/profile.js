@@ -8,17 +8,26 @@ class Profile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            errorMessage: null
+            data: {}
         }
     }
     static getInitialProps({query}) {
         return {query}
     }
+    async componentDidMount(){
+
+        const result = await axios.get(`/api/funds`);
+        this.setState({
+            data: result.data
+        })
+    }
     render(){
+        const {data} = this.state;
+        console.log(data)
         return (
             <div>
                 <PageBase>
-                    <DataList/>
+                    <DataList data={data}/>
                 </PageBase>
             </div>);
     }
