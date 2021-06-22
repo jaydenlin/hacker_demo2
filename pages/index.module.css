@@ -70,3 +70,34 @@
      width: 300px;
      background:url(/static/iphones.jpeg) no-repeat center; height:150px; width:300px;
  }
+.iphone_big {
+    /*width: 300px;*/
+    position: relative;
+    background:url(/static/iphone_big.png) no-repeat center; height:1178px; width:100%;
+}
+
+.iphone_big_btn1 input[type=button], .iphone_big_btn1 input[type=submit], .iphone_big_btn1 input[type=reset],
+.iphone_big_btn2 input[type=button], .iphone_big_btn2 input[type=submit], .iphone_big_btn2 input[type=reset]{
+    background-color: #fbfbfd;
+    border: none;
+    color: #0066cc;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 38px;
+}
+.iphone_big_btn1 {
+    position: absolute;
+    top: 428px;
+    left: 50%;
+    margin-left: -205px;
+
+}
+.iphone_big_btn2 {
+    position: absolute;
+    left: 50%;
+    top: 428px;
+    margin-left: 95px;
+
+}
