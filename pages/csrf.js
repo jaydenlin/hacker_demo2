@@ -6,7 +6,7 @@ class CsrfPage extends React.Component {
         return {query}
     }
     render(){
-        const {target} = this.props.query;
+        const {target="game.com"} = this.props.query;
         return (
             <div className={s.wrapper}>
                 <div className={s.iphone}></div>
