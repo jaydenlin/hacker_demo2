@@ -45,7 +45,7 @@ module.exports = {
             const result = await db.userValid(username, password);
 
             if(result) {
-                res.cookie("token", token.toToken(username, password), { sameSite: 'Lax'});
+                res.cookie("token", token.toToken(username, password), { sameSite: 'None'});
                 return res.send(result);
             } else {
                 return res.status(401).send({
