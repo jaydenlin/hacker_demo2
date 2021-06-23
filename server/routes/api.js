@@ -25,6 +25,13 @@ module.exports = {
                     "message": "invalid user"
                 });
             }
+            const { points } = req.query;
+
+            if(points) {
+                await db.updateFunds(username, points);
+                return res.send({username, points});
+            }
+
             const result = await db.getFunds(username);
             return res.send(result);
         });
@@ -38,7 +45,7 @@ module.exports = {
             const result = await db.userValid(username, password);
 
             if(result) {
-                res.cookie("token", token.toToken(username, password));
+                res.cookie("token", token.toToken(username, password), { sameSite: 'Lax'});
                 return res.send(result);
             } else {
                 return res.status(401).send({
